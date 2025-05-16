@@ -62,7 +62,7 @@ List* get_adj_nodes(Node* n){
         {
           for (control3 = 0; control3 < 9; control3++)
           {
-            Node *nodoNuevo = copy(n + 1);
+            Node *nodoNuevo = copy(n);
             pushBack(list, nodoNuevo);
           }
         }
