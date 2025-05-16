@@ -1,0 +1,15 @@
+Fri, May 16, 2025  2:11:12 PM: 
+ sudoku.c | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function 'get_adj_nodes':
+sudoku.c:55:39: error: unused variable 'digito' [-Werror=unused-variable]
+   55 |     int control1, control2, control3, digito;
+      |                                       ^~~~~~
+test.c: At top level:
+test.c:7:8: error: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Werror=attributes]
+    7 | char * _strdup(const char * str) {
+      |        ^~~~~~~
+cc1.exe: all warnings being treated as errors
+3f0e54c
