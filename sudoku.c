@@ -96,7 +96,7 @@ List* get_adj_nodes(Node* n){
       {
         if (n->sudo[control1][control2] == 0 )
         {
-          for (control3 = 1; control3 <= 9; control3++)
+          for (control3 = 1; control3 <= 3; control3++)
           {
             Node *nodoNuevo = createNode();
             nodoNuevo = copy(n);
