@@ -45,6 +45,15 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
 
+    int control1, control2;
+
+    for (control1 = 0; control1 < 9; control1++)
+    {
+      for (control2 = 0; control2 < 9; control2++)
+      {
+        if (n->sudo[control1][control2] );
+      }
+    }
     return 1;
 }
 
@@ -54,11 +63,11 @@ List* get_adj_nodes(Node* n){
 
     int control1, control2, control3;
 
-    for (control1 = 0; control1 < 9; control1++)
+    for (control1 = 0; control1 < 3; control1++)
     {
-      for (control2 = 0; control2 < 9; control2++)
+      for (control2 = 0; control2 < 3; control2++)
       {
-        if (n->sudo[control1][control2] == 0)
+        if (n->sudo[control1][control2] == 0 )
         {
           for (control3 = 1; control3 <= 9; control3++)
           {
