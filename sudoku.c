@@ -58,11 +58,12 @@ List* get_adj_nodes(Node* n){
     {
       for (control2 = 0; control2 < 9; control2++)
       {
-        if (n->sudo[control1][control2] == 0)
+        if (n->sudo[control1][control2] == '\0')
         {
           for (control3 = 1; control3 <= 9; control3++)
           {
-            Node *nodoNuevo = copy(n);
+            Node *nodoNuevo = (Node *) malloc(sizeof(Node));
+            nodoNuevo = copy(n);
             pushBack(list, nodoNuevo);
           }
         }
