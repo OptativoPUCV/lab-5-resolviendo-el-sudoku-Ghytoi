@@ -101,8 +101,10 @@ List* get_adj_nodes(Node* n){
             Node *nodoNuevo = createNode();
             nodoNuevo = copy(n);
             nodoNuevo->sudo[control1][control2] = control3;
-            pushBack(list, nodoNuevo);
+            if (is_valid(nodoNuevo)) pushBack(list, nodoNuevo);
+            else free(nodoNuevo);
           }
+          return list;
         }
       }
     }
