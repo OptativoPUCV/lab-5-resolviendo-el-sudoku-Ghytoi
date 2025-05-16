@@ -49,33 +49,33 @@ int is_valid(Node* n){
     
     for (control1 = 0; control1 < 9; control1++)
     {
-      int seen[10] = {0};
+      int seen[10] = {0}; // contador de aparición de los números
       for (control2 = 0; control2 < 9; control2++)
       {
         num = n->sudo[control1][control2];
-        if (num != 0 && seen[num] != 0);
+        if (num != 0 && seen[num] != 0) return 0;
         else seen[num] = 1;
       }
     }
 
     for (control1 = 0; control1 < 9; control1++)
     {
-      int seen[10] = {0};
+      int seen[10] = {0}; // contador de aparición de los números
       for (control2 = 0; control2 < 9; control2++)
       {
         num = n->sudo[control2][control1];
-        if (num != 0 && seen[num] != 0);
+        if (num != 0 && seen[num] != 0) return 0;
         else seen[num] = 1;
       }
     }
 
     for (boxRow = 0; boxRow < 3; boxRow++) {
         for (boxCol = 0; boxCol < 3; boxCol++) {
-            int seen[10] = {0};
+            int seen[10] = {0}; // contador de aparición de los números
             for (control1 = 0; control1 < 3; control1++) {
                 for (control2 = 0; control2 < 3; control2++) {
                     int num = n->sudo[boxRow * 3 + control1][boxCol * 3 + control2];
-                    if (num != 0 && seen[num] != 0);
+                    if (num != 0 && seen[num] != 0) return 0;
                     else seen[num] = 1;
                 }
             }
