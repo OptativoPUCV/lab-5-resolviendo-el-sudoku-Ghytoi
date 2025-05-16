@@ -64,6 +64,7 @@ List* get_adj_nodes(Node* n){
           {
             Node *nodoNuevo = createNode();
             nodoNuevo = copy(n);
+            nodoNuevo->sudo[control1][control2] = control3;
             pushBack(list, nodoNuevo);
           }
         }
