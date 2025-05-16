@@ -45,7 +45,7 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
 
-    int control1, control2, num;
+    int control1, control2, num, boxRow, boxCol ;
     
     for (control1 = 0; control1 < 9; control1++)
     {
@@ -69,6 +69,18 @@ int is_valid(Node* n){
       }
     }
 
+    for (boxRow = 0; boxRow < 3; boxRow++) {
+        for (boxCol = 0; boxCol < 3; boxCol++) {
+            int seen[10] = {0};
+            for (control1 = 0; control1 < 3; control1++) {
+                for (control2 = 0; control2 < 3; control2++) {
+                    int num = n->sudo[boxRow * 3 + control1][boxCol * 3 + control2];
+                    if (num != 0 && seen[num] != 0);
+                    else seen[num] = 1;
+                }
+            }
+        }
+    }
     return 1;
 }
 
